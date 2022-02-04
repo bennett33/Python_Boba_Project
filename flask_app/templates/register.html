@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet"> 
+
+
+
+</head>
+<body>
+    <div class="nav-bar">
+        <div>
+            <h1 class="title">Billy Bubble's Boba Bungalow<img src="{{ url_for('static', filename='Matcha_Green_Tea_03-512.png') }}"></h1>
+        </div>
+        <div nav="links">
+            <a href="/">Home</a> <a href="/menu">Menu</a>
+        </div>
+    </div>
+    <div class="column-container">
+        <div class="column-1">
+            <h2>Register for Account Before Ordering Online</h2>
+            <form action="/register" method="post">
+                <p>
+                    <label for="first_name" id="first-label">First Name:</label>
+                    <input type="text" id="first_name" name="first_name">
+                </p>
+                <p>
+                    <label for="last_name" id="last-label">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name">
+                </p>
+                <p>
+                    <label for="email" id="email-label1">Email:</label>
+                    <input type="text" id="email" name="email">
+                </p>
+                <p>
+                    <label for="password" id="password-label1">Password:</label>
+                    <input type="text" id="password" name="password">
+                </p>
+                <p>
+                    <label for="confirm_password" id="confirm-password-label">Confirm Password:</label>
+                    <input type="text" id="password" name="confirm_password">
+                </p>
+                <button id="btn">Sign Up</button>
+            </form>
+        </div>
+        <div class="column-2">
+            <h2 id="sign-in">Sign In</h2>
+            <form action="/login" method="post">
+                <p>
+                    <label for="email" id="email-label2">Email:</label>
+                    <input type="text" id="email2" name="email">
+                </p>
+                <p>
+                    <label for="password" id="password-label2">Password:</label>
+                    <input type="text" id="password2" name="password">
+                </p>
+                <button id="btn">Sign In</button>
+            </form>
+            {% with messages = get_flashed_messages() %}<!-- declare a variable called messages -->
+                {% if messages %}<!-- check if there are any messages -->
+                    {% for message in messages %}<!-- loop through the messages -->
+                        <p>{{message}}</p><!-- display each message in a paragraph tag -->
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</body>
+</html>

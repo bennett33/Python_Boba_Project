@@ -1,0 +1,78 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-color: #5c6263;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.nav-bar a {
+        color: white;
+        font-size: 20px;
+        margin-right: 30px;
+        text-decoration: none;
+}
+.nav-bar img {
+    width: 30px;
+}
+.column-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+.column-1 {
+    flex: 2;
+
+}
+.column-2 {
+    flex: 2;
+    text-align: center;
+}
+.column-1 p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.title {
+    font-size: 45px;
+    margin-left: 20px;
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+.column-2 img {
+    width: 500px;
+}
+.cart-item {
+    margin-bottom: 2px;
+}
+#btn {
+    background-color: black;
+    color: white;
+    border-style: none;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+#link {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+.delete {
+    margin-left: 200px;
+    margin-top: 10px;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}

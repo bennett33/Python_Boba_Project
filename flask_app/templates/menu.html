@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='menu.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet"> 
+
+
+
+</head>
+<body>
+    <div class="nav-bar">
+        <div>
+            <h1 class="title">Billy Bubble's Boba Bungalow<img src="{{ url_for('static', filename='Matcha_Green_Tea_03-512.png') }}"></h1>
+        </div>
+        <div nav="links">
+            <a href="/">Home</a> <a href="/orders/new">Place Order</a> <a href="/logout" class="logout">Logout</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Menu</h2>
+        <div class='image-con'>
+            <div class="tea">
+                <h3>Tea</h3>
+                <img src="{{ url_for('static', filename='tea.webp') }}" id="image">
+                <p>Sun Moon Lake Black Tea</p>
+                <p>Honey Mountain Tea</p>
+                <p>Lugu Oolong Tea</p>
+                <p>Songboling  Mountain Tea</p>
+            </div>
+            <div class="tea">
+                <h3>Fruit Tea</h3>
+                <img src="{{ url_for('static', filename='tea2.webp') }}" id="image">
+                <p>Fruit Tea</p>
+                <p>Passion Fruit Green Tea</p>
+                <p>Pineapple Green Tea</p>
+                <p>Green Plum Green Tea</p>
+            </div>
+            <div class="tea">
+                <h3>Tea Latte</h3>
+                <img src="{{ url_for('static', filename='tea4.webp') }}" id="image">
+                <p>Black Tea Latte</p>
+                <p>Green Tea Latte</p>
+                <p>Oolong Tea Latte</p>
+                <p>Winter Melon Latte</p>
+            </div>
+            <div class="tea">
+                <h3>Toppings</h3>
+                <img src="{{ url_for('static', filename='tea3.webp') }}" id="image">
+                <p>Salted Cream</p>
+                <p>Cheese Foam</p>
+                <p>Black Sugar Pearl</p>
+                <p>Aiyu Jelly</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

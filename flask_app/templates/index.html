@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boba</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet"> 
+
+    
+
+</head>
+<body>
+    <div class="nav-bar">
+        <div>
+            <h1 class="title">Billy Bubble's Boba Bungalow<img src="{{ url_for('static', filename='Matcha_Green_Tea_03-512.png') }}"></h1>
+        </div>
+        <div class="links">
+            <a href="/">Home</a> <a href="/menu">Menu</a> <a href="/registration">Log In</a>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="{{ url_for('static', filename='bubble.png') }}">
+        <img src="{{ url_for('static', filename='matcha.png') }}">
+    </div>
+</body>
+</html>

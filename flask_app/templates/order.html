@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='order.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet"> 
+
+
+
+</head>
+<body>
+    <div class="nav-bar">
+        <div>
+            <h1 class="title">Billy Bubble's Boba Bungalow<img src="{{ url_for('static', filename='Matcha_Green_Tea_03-512.png') }}"></h1>
+        </div>
+        <div nav="links">
+            <a href="/">Home</a> <a href="/menu">Menu</a><a href="/logout" class="logout">Logout</a>
+        </div>
+    </div>
+    <div class="column-container">
+        <div>
+            <img id="boba-img" src="{{ url_for('static', filename='飲品-黑糖珍珠鮮奶茶2.webp') }}">
+        </div>
+        <div class="column">
+            <h2>Place Order For Pickup</h2>
+            <form action="/orders/create" method='post'>
+                <p>
+                <label for="tea">Tea:</label>
+                <select name="tea" id="tea-select">
+                    <option value="Sun Moon Lake Black Tea">Sun Moon Lake Black Tea</option>
+                    <option value="Honey Mountain Tea">Honey Mountain Tea</option>
+                    <option value="Songboling Mountain Tea">Songboling Mountain Tea</option>
+                    <option value="Fruit Tea">Fruit Tea</option>
+                    <option value="Passion Fruit Green Tea">Passion Fruit Green Tea</option>
+                    <option value="Pineapple Green Tea">Pineapple Green Tea</option>
+                    <option value="Green Plum Green Tea">Green Plum Green Tea</option>
+                    <option value="Black Tea Latte">Black Tea Latte</option>
+                    <option value="Green Tea Latte">Green Tea Latte</option>
+                    <option value="Oolong Tea Latte">Oolong Tea Latte</option>
+                    <option value="Winter Melon Latte">Winter Melon Latte</option>
+                </select>
+                </p>
+                <p>
+                <label for="ice">Ice:</label>
+                <select name="ice" id="ice-select">
+                    <option value="100% Ice">100%</option>
+                    <option value="75% Ice">75%</option>
+                    <option value="50% Ice">50%</option>
+                    <option value="25% Ice">25%</option>
+                    <option value="No Ice">None</option>
+                </select>
+                </p>
+                <p>
+                <label for="sugar">Sugar:</label>
+                <select name="sugar" id="sugar-select">
+                    <option value="100% Sugar">100%</option>
+                    <option value="75% Sugar">75%</option>
+                    <option value="50% Sugar">50%</option>
+                    <option value="25% Sugar">25%</option>
+                    <option value="No Sugar">None</option>
+                </select>
+                </p>
+                <p>
+                <label for="topping">Topping:</label>
+                <select name="topping" id="topping-select">
+                    <option value="Salted Cream">Salted Cream</option>
+                    <option value="Cheese Foam">Cheese Foam</option>
+                    <option value="Black Sugar Pearl">Black Sugar Pearl</option>
+                    <option value="Aiyu Jelly">Aiyu Jelly</option>
+                    <option value="None">None</option>
+                </select>
+                </p>
+                <p>
+                <label for="another-topping">Another Topping:</label>
+                <select name="another_topping" id="another-topping-select">
+                    <option value="Salted Cream">Salted Cream</option>
+                    <option value="Cheese Foam">Cheese Foam</option>
+                    <option value="Black Sugar Pearl">Black Sugar Pearl</option>
+                    <option value="Aiyu Jelly">Aiyu Jelly</option>
+                    <option value="None">None</option>
+                </select>
+                </p>
+                <button id="btn">Add to Order</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

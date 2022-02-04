@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.title {
+    font-size: 45px;
+    margin-left: 20px;
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+body {
+    background-color: #333B3D;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+.nav-bar a {
+    color: white;
+    font-size: 20px;
+    margin-right: 30px;
+    text-decoration: none;
+}
+.nav-bar img {
+    width: 30px;
+}
+.column-2 button {
+    width: 70px;
+    height: 24px;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+}
+.banner img {
+    padding: 50px;
+}

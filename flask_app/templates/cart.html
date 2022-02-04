@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cart.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet"> 
+
+
+</head>
+<body>
+    <div class="nav-bar">
+        <div>
+            <h1 class="title">Billy Bubble's Boba Bungalow<img src="{{ url_for('static', filename='Matcha_Green_Tea_03-512.png') }}"></h1>
+        </div>
+        <div nav="links">
+            <a href="/">Home</a> <a href="/menu">Menu</a> <a href="/orders/new">Place Order</a> <a href="/logout" class="logout">Logout</a>
+        </div>
+    </div>
+    <div class="column-container">
+        <div class="column-1" id="mid-col">
+            <h2>Your Order</h2>
+                {% if order.orders %}
+                    {% for order in order.orders %}
+                    <div class="cart-item"> 
+                        <p>{{order.tea}}</p>
+                        <p>{{order.ice}}</p>
+                        <p>{{order.sugar}}</p>
+                        <p>{{order.topping}}</p>
+                        <p>{{order.another_topping}}</p>
+                        <p id="list-price">${{ "{:.2f}".format( order.price / 100 ) }}
+                        </p>
+                        <a class="delete" href="/orders/destroy/{{order.id}}">Delete</a>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                <p>Your cart is empty</p>
+                {% endif %}
+                <p id="price">Total: ${{ "{:.2f}".format( order.orders | sum(attribute='price') / 100 ) }}
+                </p>
+            <a id="link" href="/orders/new">Add Another Item</a>
+            <a id="link" href="/orders/buy">Place Order</a>
+        </div>
+        <div class="column-2">
+                <!-- <img src="../static/2021-05-25-06-14-31-1500x1125.jpeg"> -->
+                <!-- <img src="../static/bubble-tea-5756870_960_720.png"> -->
+        </div>
+    </div>
+</body>
+</html>
+
