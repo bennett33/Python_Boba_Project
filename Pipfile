@@ -5,8 +5,9 @@ name = "pypi"
 
 [packages]
 pymysql = "*"
-flask = "*"
+flask = "==2.0.3"
 flask-bcrypt = "*"
+werkzeug = "==2.0.3"
 
 [dev-packages]
 
